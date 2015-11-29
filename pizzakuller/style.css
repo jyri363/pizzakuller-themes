@@ -1,0 +1,318 @@
+/*
+ Theme Name:     Pizzakuller
+ Description:    Pizzakuller Theme
+ Author:         IMeedia
+ Author URI:     http://kodulehe-tegemine.eu
+ Template:       cooker
+*/
+ 
+@import url("../cooker/css/style.css");
+
+/* HOME HEADER SLIDER - START */
+
+/* HOME HEADER SLIDER - END */
+
+/* TEXT - START */
+body {
+	font-family: Lucida Sans,sans-serif !important;
+}
+
+h1.page-title {
+    margin: 0px 0px 3px;
+    font-family: Lucida sans,sans-serif !important;
+}
+
+.widgettitle, .module-title {
+    margin: 0px !important;
+    font-size: 1em !important;
+    font-family: Lucida sans,sans-serif !important;
+    letter-spacing: normal;
+    border-top: none;
+}
+
+/* TEXT - END */
+
+#content, .content {
+    position: relative;
+    margin-bottom: 30px;
+    width: 100% !important;
+}
+
+/* VISUAL - START */
+
+#top-nav {
+    margin: 3px 0px 0px 130px !important;
+}
+
+#top-nav li a {
+    font-size: 12px !important;
+    color: #999 !important;
+}
+
+#top-nav li a:hover {
+    color: #fafafa !important;
+}
+
+#searchform-wrap {
+    margin-top: 1px !important;
+}
+
+#site-logo img {
+    margin-top: -55px !important;
+    margin-bottom: 20px !important;
+}
+
+#main-nav, #headerwrap #searchform {
+    display: block !important;
+    float: right !important;
+}
+
+#headerwrap {
+    background-color: #FFF !important;
+}
+
+#contentwrap, #sidebar {
+    padding-top: 1% !important;
+}
+/*
+#sidebar {
+    width: 28.28%;
+    float: right;
+    background-color: #ebebeb !important;
+    float: left;
+}
+#contentwrap {
+    width: 67.64% !important;
+    float: left;
+}
+*/
+/* VISUAL - END */
+
+/* FIXED HEADER - START */
+
+/* FIXED HEADER - END */
+
+/* NY & PEETRI NUPUD - START */
+
+#main-nav a {
+    padding: 10px 25px !important;
+    border-radius: 10px !important;
+}
+#main-nav li a:hover {
+    border-radius: 10px !important;
+}
+
+#main-nav li a{
+    background-color: rgba(255,255,255, 0.8) !important;
+	color: #000 !important;
+}
+
+#main-nav li {
+    margin: 40px 10px !important;
+}
+
+#main-nav .current_page_item a, #main-nav .current-menu-item a {
+    background-color: #E13B09 !important;
+	color: #FFF !important;
+    border-radius: 10px !important;
+}
+
+#main-nav li a:hover{
+    background-color: #E13B09 !important;
+	color: #FFF !important;
+    border-radius: 10px !important;
+}
+
+.main-menu {
+    background: transparent !important;
+}
+/* NY & PEETRI NUPUD - END */
+
+/* GRAVITY FORM PRODUCT VIEW - START */
+.lisakast_wrapper {
+
+}
+
+/* GRAVITY FORM PRODUCT VIEW - END */
+
+/* LOOP PRODUCT VIEW - START */
+
+.grid4 .page-title {
+	display: none;
+}
+
+.woocommerce .woocommerce-breadcrumb {
+    display: none !important;
+}
+
+.woocommerce .woocommerce-ordering, .woocommerce .woocommerce-result-count {
+    display: none !important;
+}
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+	text-align: center !important;
+    margin: 1em 1% 1em 1% !important;
+}
+
+.woocommerce ul.products li.product .price {
+    color: #000 !important;
+    margin-bottom: 0.5em !important;
+    font-size: 18px !important;
+    height: 50px !important;
+	background-image: url("http://imwebsolutions.eu/veebitestid/pizzakuller/wp-content/uploads/2015/10/price.png") !important;
+    background-repeat: no-repeat !important;
+    text-align: left !important;
+    padding: 10px 0 0 15px !important;
+}
+
+.price {
+    margin-top: -104px;
+    font-style: italic;
+    margin-right: -23px;
+    min-width: 90px;
+    position: absolute;
+    right: 0;
+}
+
+div#product-top {
+	width: 40% !important;
+	float: right !important;
+}
+div#product-top p.price {
+    font-size: 55px !important;
+    padding: 0px !important;
+    margin-top: 8px !important;
+}
+
+div#product-top .amount {
+    font-size: 25px !important;
+    padding: 0px !important;
+}
+
+/* li.type-product a:hover{
+    background-image: url("http://imwebsolutions.eu/veebitestid/pizzakuller/wp-content/uploads/2015/10/product-hover.png") !important;
+}*/
+
+/* LOOP PRODUCT VIEW - END */
+
+/* WOOCOMMERCE SHOPPING CART - START */
+/*
+div.widget.woocommerce.widget_shopping_cart {
+    position: relative;
+    padding: 10px 15px 35px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    border-radius: 8px 8px 8px 8px;
+    background: #CC1602 none repeat scroll 0% 0%;
+}
+
+div.widget.woocommerce.widget_shopping_cart .widget-title {
+    font-size: 16px;
+    color: #FFF;
+    font-weight: 300;
+    font-family: Lucida Sans,Arial,sans-serif;
+    padding: 14px 20px 12px;
+    border-radius: 4px 4px 0px 0px;
+    border-bottom: 1px solid #921400;
+    background: #920F01 none repeat scroll 0% 0%;
+}
+*/
+/* WOOCOMMERCE SHOPPING CART - END */
+
+#content .hoverkast {
+    background-image:url(../images/aktiiv2.png);
+    background-position:-1000px -1000px;
+    background-repeat:no-repeat no-repeat;
+    height:382px;
+
+    position:absolute;
+    top:-30px;
+    width:242px;
+    z-index:1;
+}
+#content2 .hoverkast {
+    background-image:url(../images/aktiiv2.png);
+    background-position:-1000px -1000px;
+    background-repeat:no-repeat no-repeat;
+    height:382px;
+
+    position:absolute;
+    top:-30px;
+    width:242px;
+    z-index:1;
+}
+
+#content .hoverkast:hover{background-position:0px 10px;}
+#content .tootekast {
+    margin:10px 0 0 0px;
+    min-height:360px;
+
+    position:relative;
+    width:245px !important;
+    z-index:3;
+}
+#content .hoverkast:hover{background-position:0px 10px;}
+#content .tootekast {
+    margin:10px 0 0 0px;
+    min-height:360px;
+    position:relative;
+    width:245px !important;
+    z-index:3;
+}
+
+/* POPUP */
+.popup-warning .content {
+    width: 403px;
+    border-radius: 15px;
+    height: 325px;
+    background: #FFF;
+    margin: -161px auto 0 auto;
+    top: 50%;
+    position: relative;
+    color: #380000;
+}
+.popup-warning .content h1 {
+    width: 313px;
+    margin: 0 auto 0 auto;
+    padding: 40px 0 0 0;
+    font-size: 24px;
+}
+.popup-warning .content h5 {
+    margin: 0 auto 0 auto;
+    padding: 20px 0 50px 0;
+    font-size: 12px;
+    width: 313px;
+}
+.popup-warning .content .action_continue {
+    background: #e13b09;
+    padding: 11px 0 11px 38px;
+    border-radius: 5px;
+    color: #380000;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    width: 202px;
+    margin: 0 auto 10px auto;
+    display: block;
+}
+.popup-warning .content .action_close {
+    background: #f3a400;
+    width: 202px;
+    color: #380000;
+    font-size: 20px;
+    margin: 0 auto;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    border-radius: 5px;
+    padding: 11px 0 11px 38px;
+}
+.popup-warning .content .action_continue img {
+    position: absolute;
+    margin: 3px 0 0 180px;
+    width: 10px !important;
+}
+.popup-warning .content .action_close img {
+    position: absolute;
+    margin: 5px 0 0 0;
+    width: 10px !important;
+}
