@@ -1281,7 +1281,7 @@ h3.title-separator span.sep {
 }
 
 .dsm-mobile-nav-dropdown .hidden { display: none; }
-
+.hidden { display: none; }
 .dsm-mobile-search-hidden {
 	height: 107px;
 	padding: 0 20px;
@@ -5507,7 +5507,85 @@ ul.products h3 {
 
 
 /* POPUP */
+.popup-warning,
+.map-popup{
+    background-color:rgba(0,0,0,0.3);
+    position: fixed;
+    z-index: 9999;
+    display: none;
+    width: 100%;
+    height: 100%;
+}
 .popup-warning .content {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 15px;
+    color: #380000;
+    height: 325px;
+    margin: -161px auto 0;
+    position: relative;
+    top: 50%;
+    width: 403px !important;
+	float: none !important;
+}
+.popup-warning .content h1 {
+    font-size: 24px;
+    margin: 0 auto;
+    padding: 40px 0 0;
+    width: 313px;
+}
+.popup-warning .content h5 {
+    font-size: 12px;
+    margin: 0 auto;
+    padding: 20px 0 50px;
+    width: 313px;
+}
+.popup-warning .content .close {
+    background: rgba(0, 0, 0, 0) url("../images/close.png") no-repeat scroll 0 0;
+    display: block;
+    height: 29px;
+    margin: -13px 0 0 387px;
+    position: absolute;
+    width: 27px;
+}
+.popup-warning .content .action_continue {
+    background: #e13b09 none repeat scroll 0 0;
+    border-radius: 5px;
+    color: #380000;
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 auto 10px;
+    padding: 11px 0 11px 38px;
+    text-decoration: none;
+    width: 202px;
+}
+.popup-warning .content .action_continue img {
+    margin: 3px 0 0 180px;
+    position: absolute;
+}
+.popup-warning .content .action_continue div {
+    margin: 0;
+}
+.popup-warning .content .action_close {
+    background: #f3a400 none repeat scroll 0 0;
+    border-radius: 5px;
+    color: #380000;
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 11px 0 11px 38px;
+    text-decoration: none;
+    width: 202px;
+}
+.popup-warning .content .action_close img {
+    margin: 5px 0 0;
+    position: absolute;
+}
+.popup-warning .content .action_close div {
+    margin: 0 0 0 20px;
+}
+/*.popup-warning .content {
     width: 403px;
     border-radius: 15px;
     height: 325px;
@@ -5572,7 +5650,7 @@ ul.products h3 {
     position: relative !important;
     color: #380000 !important;
 }
-
+*/
 #hs-rsp-image-wrap {
     position: absolute !important;
     background-color: #FFF !important;

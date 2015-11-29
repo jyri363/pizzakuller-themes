@@ -1,18 +1,26 @@
 /*
- Theme Name:     Pizzakuller
- Description:    Pizzakuller Theme
- Author:         IMeedia
- Author URI:     http://kodulehe-tegemine.eu
- Template:       cooker
+	Theme Name: Pizzakuller
+	Description: Pizzakuller Theme
+	Author: IMeedia
+	Author URI: http://kodulehe-tegemine.eu
+	Version: 1.0.1
+	Template: cooker
+	License: GNU General Public License v2 or later
+	License URI: http://www.gnu.org/licenses/gpl-2.0.html
+	Text Domain: pizzakuller
 */
- 
-@import url("../cooker/css/style.css");
+
+/* Theme customization starts here
+-------------------------------------------------------------- 
+
+@import url("../cooker/css/style.css"); */
 
 /* HOME HEADER SLIDER - START */
 
 /* HOME HEADER SLIDER - END */
 
 /* TEXT - START */
+
 body {
 	font-family: Lucida Sans,sans-serif !important;
 }
@@ -260,6 +268,16 @@ div.widget.woocommerce.widget_shopping_cart .widget-title {
 }
 
 /* POPUP */
+.popup-warning,
+.map-popup{
+    background-color:rgba(0,0,0,0.3) !important;
+    position: fixed !important;
+    z-index: 9999 !important;
+    display: none !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
 .popup-warning .content {
     width: 403px;
     border-radius: 15px;
