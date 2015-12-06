@@ -468,6 +468,60 @@ add_filter( 'woocommerce_output_related_products_args', 'jk_related_products_arg
 
 /* MY FUNCTIONS */
 
+// Place the following code in your theme's functions.php file to add the payment type to all emails
+add_action( 'woocommerce_email_order_meta', 'wc_add_payment_type_to_emails', 15, 2 );
+function wc_add_payment_type_to_emails( $order, $is_admin_email ) {
+    echo '<p style="display:inline"><strong>' . _e('[:et]Makseviis: [:en]Payment type: [:ru]Вид оплаты: ') . '</strong>' . $order->payment_method_title . '</p>';
+}
+add_filter('woocommerce_available_variation', function ($value, $object = null, $variation = null) {
+    if ($value['price_html'] == '') {
+      $value['price_html'] = '<span class="price">' . $variation->get_price_html() . '</span>';
+    }
+    return $value;
+  }, 10, 3);
+/**
+ * Add store location select dropdown in checkout page
+ **/
+add_filter( 'woocommerce_checkout_fields' , 'custom_store_pickup_field');
+ 
+function custom_store_pickup_field( $fields ) {
+      $fields['shipping']['store_pickup'] = array(
+     'type'     => 'select',
+            'options'  => array(
+        'option_1' => 'Option 1 text',
+                'option_2' => 'Option 2 text',
+        'option_3' => 'Option 2 text'
+        ),
+     'label'     => __('Store Pick Up Location', 'woocommerce'),
+    'required'  => false,
+    'class'     => array('store-pickup form-row-wide'),
+    'clear'     => true
+     );
+ 
+     return $fields;
+}
+/**
+ * Update the order meta with store location pickup value
+ **/
+add_action( 'woocommerce_checkout_update_order_meta', 'store_pickup_field_update_order_meta' );
+function store_pickup_field_update_order_meta( $order_id ) {
+                if ( $_POST[ 'store_pickup' ] )
+                                update_post_meta( $order_id, 'Store PickUp Location', esc_attr( $_POST[ 'store_pickup' ] ) );
+}
+$type = $woocommerce->session->pizza_type;
+if ($type == 'peetri'){
+add_action( 'woocommerce_flat_rate_shipping_add_rate', 'add_another_custom_flat_rate', 10, 2 );
+
+function add_another_custom_flat_rate( $method, $rate ) {
+	$new_rate          = $rate;
+	$new_rate['id']    .= ':' . 'custom_rate_name'; // Append a custom ID
+	$new_rate['label'] = 'New York Pizza'; // Rename to 'Rushed Shipping'
+	$new_rate['cost']  += 2; // Add $2 to the cost
+	
+	// Add it to WC
+	$method->add_rate( $new_rate );
+}
+}
 
 ?>
 

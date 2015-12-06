@@ -1,7 +1,7 @@
 <?php // Clear cart
 global $cooker_options, $woocommerce;
 if ($_GET['clear-cart'] == 1) {
-    $woocommerce->cart->empty_cart();
+    WC()->cart->empty_cart();
 }
 
 $session = WP_Session::get_instance(); ?>
@@ -139,8 +139,8 @@ $session = WP_Session::get_instance(); ?>
 	</div>
 		
 	 <?php
-        if (sizeof($woocommerce->cart->get_cart()) > 0) {
-            foreach ($woocommerce->cart->get_cart() as $cart_item_key => $values) {
+        if (sizeof(WC()->cart->get_cart()) > 0) {
+            foreach (WC()->cart->get_cart() as $cart_item_key => $values) {
                 $_product = $values['data'];
                 if ($_product->exists() && $values['quantity'] > 0) {
                     ?>
@@ -163,9 +163,10 @@ $session = WP_Session::get_instance(); ?>
                 }
             }
         } else {
-            unset($woocommerce->session->pizza_type);
-            unset($woocommerce->session->pizza_location);
+            unset(WC()->session->pizza_type);
+            unset(WC()->session->pizza_location);
         }
+		//echo '<a>' . $maincat . '</a>';
         ?>
 
 	<div class='wrapper'>
@@ -181,7 +182,9 @@ $session = WP_Session::get_instance(); ?>
 						'fallback_cb'     => false,
 					);
 					wp_nav_menu( $args ); 
+					
 				?>
+				
 			</nav>
 			<!-- Search Bar Widget -->
 			<?php if ( is_active_sidebar( 'search-product-ckrw' ) ) : ?> 
@@ -296,5 +299,7 @@ $session = WP_Session::get_instance(); ?>
 		 */
 		if ( is_singular() && get_option( 'thread_comments' ) )
 			wp_enqueue_script( 'comment-reply' );
+		//echo WC()->session->pizza_type;
+		//echo WC()->session->pizza_location;
 	?>
 	</header>

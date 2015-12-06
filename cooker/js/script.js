@@ -310,7 +310,7 @@ jQuery(document).ready(function() {
             var data = {
                 action: 'woocommerce_update_shipping_method',
                 security: woocommerce_params.update_shipping_method_nonce,
-                shipping_method: 'pizzashipper',
+                shipping_method: 'wc_pizzashipper',
                 type: type,
                 name: name
             };
