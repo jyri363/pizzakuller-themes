@@ -3,7 +3,8 @@
 	<?php global  $social_links, $cooker_options; ?>
 
 	<footer class="footer-main">
-		<div class="footer-holder">
+		<div class="footer-holder"  style="min-height: 120px !important;">
+<?php /*
 			<div class="links social-links first">
 				<h6>follow us on...</h6>
 				<ul>
@@ -18,6 +19,24 @@
 					<li class="rss"><a href="<?php bloginfo_rss('rss_url') ?>">Rss feed</a></li>
 				</ul>
 			</div>
+*/ ?>
+<div style="float: right;width: 19.2%;overflow: hidden;margin: 0px auto;padding: 35px 1%;"><h6 style="color: #FFFFFF !important; padding: 0 0 10px 0 !important;">Kontakt</h6>
+<div class="textwidget">
+<p style="margin: 0px 0px 15px !important;">Telli otse veebist!</p>
+<p style="margin: 0px 0px 15px !important;">Tellimine: +372 5666-7788</p>
+<p style="margin: 0px 0px 15px !important;">E-mail: <a href="mailto:info@pizzakuller.ee" style="color: #FFFFFF !important;">info@pizzakuller.ee</a></p>
+<p>
+</p></div>
+</div>
+<div id="nav_menu-3" class="links widget_nav_menu"><h6 style="color: #FFFFFF !important; padding: 0px 10px 6px !important;">Pizza Kuller</h6>
+<div class="menu-footermenu-container">
+<ul id="menu-footermenu" class="menu">
+<li id="menu-item-400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-400"><a href="http://imwebsolutions.eu/veebitestid/pizzakuller/kuidas-tellida/">Kuidas tellida?</a></li>
+<li id="menu-item-399" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-399"><a href="http://imwebsolutions.eu/veebitestid/pizzakuller/kulleri-hinnakiri/">Kulleri hinnakiri</a></li>
+<li id="menu-item-398" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-398"><a href="http://imwebsolutions.eu/veebitestid/pizzakuller/meist/">Meist</a></li>
+</ul>
+</div>
+</div>
 			<?php if ( is_active_sidebar( 'footer-list-ckrw' ) ) {
 					dynamic_sidebar('footer-list-ckrw'); 
 			}1?>

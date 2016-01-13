@@ -34,9 +34,3 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 .bypostauthor {}
-
-#content, .content {
-    position: relative;
-    margin-bottom: 30px;
-    width: 100% !important;
-}

@@ -15,7 +15,7 @@ global $woocommerce;
 ?>
 
 <div class="cart-box">
-	<div class="top">Ostukorv</div>
+	<div class="top">Cart</div>
 	<div class="body">
 		<ul>
 			<li class="info">

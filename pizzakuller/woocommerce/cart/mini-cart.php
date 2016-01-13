@@ -15,14 +15,14 @@ global $woocommerce;
 ?>
 
 <div class="cart-box">
-	<div class="top">Ostukorv</div>
+	<div class="top"><?php _e('Cart', 'woocommerce'); ?></div>
 	<div class="body">
 		<ul>
 			<li class="info">
 
 		<?php if ( sizeof( WC()->cart->get_cart() ) > 0 ) : ?>
 
-				<span class="products"><strong><?php  echo count($woocommerce->cart->get_cart());?></strong> products</span>
+				<span class="products"><strong><?php echo count($woocommerce->cart->get_cart());?></strong><?php _e(' Products', 'woocommerce'); ?></span>
 				<a href="<?php echo $woocommerce->cart->get_cart_url(); ?>"><?php _e('View Cart', 'woocommerce'); ?></a>
 		
 		<?php else : ?>

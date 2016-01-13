@@ -15,6 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 //get_header( 'shop' ); 
 get_header();
+
 ?>
 
 	<?php

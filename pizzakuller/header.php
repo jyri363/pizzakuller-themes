@@ -4,7 +4,15 @@ if ($_GET['clear-cart'] == 1) {
     WC()->cart->empty_cart();
 }
 
-$session = WP_Session::get_instance(); ?>
+$session = WP_Session::get_instance(); 
+if (sizeof($woocommerce->cart->get_cart()) > 0) {
+	setcookie("woocommerce_items_in_cart", "1", 0, COOKIEPATH, COOKIE_DOMAIN, false);
+	setcookie("woocommerce_cart_hash", md5(time()), 0, COOKIEPATH, COOKIE_DOMAIN, false);
+} else {
+	setcookie("woocommerce_items_in_cart", "0", 0, COOKIEPATH, COOKIE_DOMAIN, false);
+	setcookie("woocommerce_cart_hash", md5(time()), 0, COOKIEPATH, COOKIE_DOMAIN, false);
+}
+?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -13,6 +21,7 @@ $session = WP_Session::get_instance(); ?>
 	<![endif]-->
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width" />
+	<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
 	<title>
 		<?php
 		/*
@@ -233,7 +242,12 @@ $session = WP_Session::get_instance(); ?>
 			</nav>
 		<?php endif ?>
 		<!--=======End Main Menu========-->
-		<div class="dsm-header-main-slider-holder">
+		<div class="dsm-header-main-slider-holder" style="padding-top: 165px !important;">
+		<?php if(is_home() || is_front_page()): ?>
+		<?php echo do_shortcode('[rev_slider alias="homeslider_boxed"]'); ?>
+		<?php endif /*?>
+
+
 			<div class="header-slider-canvas">
 				<div class="parts part-1"></div>
 				<div class="parts part-2"></div>
@@ -283,7 +297,7 @@ $session = WP_Session::get_instance(); ?>
 						</ul>
 					</div>
 				</div>
-			<?php endif ?>
+			<?php endif */ ?>
 		</div>
 	<?php else: //is_home ?>
 	<!--========Main Menu=======-->

@@ -68,8 +68,8 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 				 */
 				do_action( 'woocommerce_after_single_variation' );
 			?>
-			<div style="width:320px !important; margin:0 auto !important; text-align:center !important;position: relative;"><button type="submit" class="checkout-button2" style="margin-top:55px; position:absolute; bottom: -300px;"><?php echo apply_filters('single_add_to_cart_text', __('Add to cart', 'woocommerce'), $product->product_type); ?></button></div>
-		
+			<?php /* <div style="width:320px !important; margin:0 auto !important; text-align:center !important;position: relative;"><button type="submit" class="checkout-button2" style="margin-top:55px; position:absolute; bottom: -300px;"><?php echo apply_filters('single_add_to_cart_text', __('Add to cart', 'woocommerce'), $product->product_type); ?></button></div> */ ?>
+			<div class="buttondiv" style="width:auto !important; margin:0 auto !important; text-align:center !important;position: relative;"><button type="submit" class="checkout-button2" style="width: 280px !important; margin: 0 3px 0 0 !important;background: #E13B09 none repeat scroll 0% 0% !important;border-radius: 5px 5px 0px 0px !important;height: 45px !important;line-height: 45px!important;padding: 0px !important;font-size: 20px !important;color: rgb(255, 255, 255) !important;"><?php echo apply_filters('single_add_to_cart_text', __('Add to cart', 'woocommerce'), $product->product_type); ?></button></div>
 		</div>
 		<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 		

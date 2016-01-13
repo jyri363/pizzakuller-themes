@@ -28,9 +28,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	 	return;
 	 }
 ?>
-<div id="alammenuu">
-    <?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('alam')) ?>
-</div>
+
 <div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class('left-content'); ?>>
 	<div class="meal-details single">
 	<?php

@@ -508,7 +508,7 @@ function store_pickup_field_update_order_meta( $order_id ) {
                 if ( $_POST[ 'store_pickup' ] )
                                 update_post_meta( $order_id, 'Store PickUp Location', esc_attr( $_POST[ 'store_pickup' ] ) );
 }
-$type = $woocommerce->session->pizza_type;
+/*$type = $woocommerce->session->pizza_type;
 if ($type == 'peetri'){
 add_action( 'woocommerce_flat_rate_shipping_add_rate', 'add_another_custom_flat_rate', 10, 2 );
 
@@ -521,7 +521,7 @@ function add_another_custom_flat_rate( $method, $rate ) {
 	// Add it to WC
 	$method->add_rate( $new_rate );
 }
-}
+*/
 
 ?>
 

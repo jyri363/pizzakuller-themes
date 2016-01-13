@@ -1,6 +1,6 @@
 <?php //===============  Print Right Sidebar  ================ ?>
 <div class="right-content main">
-	<a class="open-sidebar" href="#"><span>Sidebar</span></a>
+	<a class="open-sidebar" href="#"><span><?php _e('Sidebar'); ?></span></a>
 	<div class="sidebar-inner">
 		<?php if ( is_active_sidebar( 'right-sidebar-cart-ckrw' ) ) {
 				 dynamic_sidebar('right-sidebar-cart-ckrw');
