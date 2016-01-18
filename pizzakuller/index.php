@@ -57,7 +57,7 @@
 									}
 								?></span>
 								
-								<span class="button-ckr right">View</span>
+								<span class="button-ckr right"><?php _e('View'); ?></span>
 								<p class="test"><span class="nupp"><?php _e('Add to cart'); ?></span></p>
 							</a>
 						</li>

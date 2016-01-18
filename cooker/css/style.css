@@ -3538,7 +3538,7 @@ input.input-ckr,
 .woocommerce-page .quantity .minus, 
 .woocommerce #content .quantity .minus,
 .woocommerce-page #content .quantity .minus {
-	display: inline-block;
+/*	display: inline-block;
 	position: relative;
 	top: 2px;
 	width: 35px;
@@ -3553,7 +3553,7 @@ input.input-ckr,
 	box-shadow: none;
 	-webkit-transition: none;
 	-moz-transition: none;
-	transition: none;
+	transition: none;*/
 }
 .woocommerce #content .quantity .minus:hover,
 .woocommerce #content .quantity .plus:hover,
@@ -3563,35 +3563,35 @@ input.input-ckr,
 .woocommerce-page #content .quantity .plus:hover,
 .woocommerce-page .quantity .minus:hover,
 .woocommerce-page .quantity .plus:hover {
-	background-image: url('../images/sprite-arrows.png');
+	/*background-image: url('../images/sprite-arrows.png');
 	background-repeat: no-repeat;
-	border-color: #cc1602;
+	border-color: #cc1602;*/
 }
 
 .woocommerce .quantity .plus, 
 .woocommerce-page .quantity .plus, 
 .woocommerce #content .quantity .plus, 
-.woocommerce-page #content .quantity .plus { background-position: -79px 12px; }
+.woocommerce-page #content .quantity .plus { /*background-position: -79px 12px*/}
 
 .woocommerce .quantity .plus:hover, 
 .woocommerce-page .quantity .plus:hover, 
 .woocommerce #content .quantity .plus:hover, 
 .woocommerce-page #content .quantity .plus:hover {
-	background-position: -79px -18px;
+	/*background-position: -79px -18px;*/
 }
 
 .woocommerce .quantity .minus,
 .woocommerce-page .quantity .minus, 
 .woocommerce #content .quantity .minus,
 .woocommerce-page #content .quantity .minus {
-	float: left;
-	background-position: -50px 12px;
+	/*float: left;
+	background-position: -50px 12px;*/
 }
 .woocommerce .quantity .minus:hover,
 .woocommerce-page .quantity .minus:hover, 
 .woocommerce #content .quantity .minus:hover,
 .woocommerce-page #content .quantity .minus:hover {
-	background-position: -50px -18px;
+	/*background-position: -50px -18px;*/
 }
 
 .single-product.woocommerce .quantity input.qty, 
@@ -5482,7 +5482,14 @@ a.button.add_to_cart_button.product_type_variable {
     font-size: 14px;
     color: #C21701;
     cursor: pointer;
-    background: transparent -moz-linear-gradient(center top , #F6E3BE, #DFBF7F) repeat scroll 0% 0%;
+   /* background: transparent -moz-linear-gradient(center top , #F6E3BE, #DFBF7F) repeat scroll 0% 0%; */ /* see töötab (vist) ainult mazilla firefox'il  */
+    background: #e2c085;
+    background: linear-gradient(to bottom, #f6e3be 0%,#dfbf7f 100%);
+    background: -moz-linear-gradient(top center, #f6e3be, #dfbf7f);
+    background: -webkit-gradient(linear, left top, left bottom, from(#f6e3be), to(#dfbf7f));
+    background: -moz-linear-gradient(top, #f6e3be, #dfbf7f);
+    background: -ms-linear-gradient(top, #f6e3be, #dfbf7f);
+    background: -o-linear-gradient(top, #f6e3be, #dfbf7f);
     box-shadow: none;
 }
 .cart-box .submit-button {
@@ -6129,7 +6136,7 @@ ul.gform_fields {
 }
 
 	/* Alammenüü Styles */
-ul#menu-ny-pizza-alam.menu {
+/*ul#menu-ny-pizza-alam.menu {
     background: #EAEAEA none repeat scroll 0% 0% !important;
     text-align: right !important;
     width: 100% !important;
@@ -6173,6 +6180,29 @@ ul#menu-peetri-pizza-alam.menu li {
 	text-decoration: none !important;
 }
 ul#menu-peetri-pizza-alam.menu li a {
+	text-decoration: none !important;
+	color: #FFF !important;
+}*/
+#alammenuu ul.menu {
+    background: #EAEAEA none repeat scroll 0% 0% !important;
+    text-align: right !important;
+    width: 100% !important;
+    clear: both !important;
+    padding: 1px 0 0 0px !important;
+    height: 48px !important;
+    border-radius: 0px !important;
+}
+#alammenuu ul.menu li {
+	background: #CC1602 none repeat scroll 0% 0% !important;
+	display: inline !important;
+	list-style-type: none !important;
+	line-height: 45px !important;
+	padding: 16px 25px !important;
+	color: #FFF !important;
+	font-weight: 700 !important;
+	text-decoration: none !important;
+}
+#alammenuu ul.menu li a {
 	text-decoration: none !important;
 	color: #FFF !important;
 }
@@ -6759,4 +6789,11 @@ p.demo_store {
     line-height: 25px !important;
     font-weight: normal !important;
 	padding-top: 0px !important;
+}
+
+/************************* quantity **********************************/
+.woocommerce .quantity .plus, .woocommerce-page .quantity .plus, .woocommerce #content .quantity .plus, .woocommerce-page #content .quantity .plus, .woocommerce .quantity .minus, .woocommerce-page .quantity .minus, .woocommerce #content .quantity .minus, .woocommerce-page #content .quantity .minus {
+    height: 19px;
+    opacity: 0;
+    width: 33px;
 }

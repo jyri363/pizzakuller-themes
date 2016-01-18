@@ -21,12 +21,12 @@ get_header(); ?>
 		if ( in_array( 'new-york-pizza', $categories ) || in_array( 'new-york-pizza-restaurant', $categories )) {
 		  if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('alam')) {}
 		 // woocommerce_get_template_part( 'content', 'single-product' );
-		} elseif ( in_array( 'peetri-pizza', $categories ) ) {
+		} elseif ( in_array( 'peetri-pizza', $categories ) || in_array( 'peetri-pizza-restaurant', $categories )) {
 		  if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('alam2')) {}
 		  // woocommerce_get_template_part( 'content', 'single-product' );
-		} /*else {
+		} else {
 		  echo 'some blabla';
-		}*/
+		}
 
 			//if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('alam')) {}
 				

@@ -108,6 +108,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 		 */
 		//do_action( 'woocommerce_after_single_product_summary' );
 		remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+		remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_product_description_panel', 9 );
+		
         do_action( 'woocommerce_after_single_product_summary' );
 	?>
 

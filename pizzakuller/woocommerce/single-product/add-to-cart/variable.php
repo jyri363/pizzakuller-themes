@@ -60,7 +60,6 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 					<p style="margin-top:-5px; margin-bottom:0px; text-align:center; font-family:Lucida Sans, sans-serif; font-size:14px;"><?php _e('Choose qty:'); ?></p>
 					<input type="hidden" name="variation_id" value="" />
 					<?php woocommerce_quantity_input(); ?>
-
 				</div>
 				<?php
 				/**
