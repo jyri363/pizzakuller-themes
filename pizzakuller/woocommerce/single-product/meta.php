@@ -18,7 +18,21 @@ $tag_count = sizeof( get_the_terms( $post->ID, 'product_tag' ) );
 
 ?>
 <div class="product_meta">
+	<div class="hidden" id="single-product-categories"><?php
+        $terms = get_the_terms($product->id, 'product_cat');
+        if ($terms) {
+            foreach ($terms as $term) {
+                if ($term->parent == 0) {
+                    $maincat = $term->name;
+                } else {
+                    $second = $term->name;
+                }
+            }
 
+            echo '<a>' . $maincat . '</a>';
+            echo '<a>' . $second . '</a>';
+        }
+    ?></div>
 	<?php do_action( 'woocommerce_product_meta_start' ); ?>
 
 	<?php /* if ( wc_product_sku_enabled() && ( $product->get_sku() || $product->is_type( 'variable' ) ) ) : ?>

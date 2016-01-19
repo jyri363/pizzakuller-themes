@@ -5,6 +5,16 @@ if ($_GET['clear-cart'] == 1) {
 }
 
 $session = WP_Session::get_instance(); 
+/*if ($session['pizzalang'] && !$_GET['setlang'] && !strpos($_SERVER['REQUEST_URI'], 'pay')) {
+    if (qtrans_getLanguage() != $session['pizzalang']) {
+        global $q_config;
+        $q_config['language'] = $session['pizzalang'];
+        wp_redirect(qtrans_convertURL('', $session['pizzalang']));
+    }
+}
+if (!strpos($_SERVER['REQUEST_URI'], 'pay'))
+    $session['pizzalang'] = qtrans_getLanguage();*/
+
 if (sizeof($woocommerce->cart->get_cart()) > 0) {
 	setcookie("woocommerce_items_in_cart", "1", 0, COOKIEPATH, COOKIE_DOMAIN, false);
 	setcookie("woocommerce_cart_hash", md5(time()), 0, COOKIEPATH, COOKIE_DOMAIN, false);
@@ -315,5 +325,7 @@ if (sizeof($woocommerce->cart->get_cart()) > 0) {
 			wp_enqueue_script( 'comment-reply' );
 		//echo WC()->session->pizza_type;
 		//echo WC()->session->pizza_location;
+		//echo $session['pizzalang'];
+		//echo html_show_array($session);
 	?>
 	</header>
